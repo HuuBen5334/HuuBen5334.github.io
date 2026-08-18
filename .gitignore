@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# unused source photo, not referenced by the site
+images/*.heic

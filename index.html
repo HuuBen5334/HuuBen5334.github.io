@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Ben Nguyen — Computer Engineering</title>
+<meta name="description" content="Portfolio of Ben Nguyen, senior Computer Engineering student at the University of Florida. Custom PCBs, ESP32 firmware, and distributed full-stack systems.">
+<meta name="author" content="Ben Nguyen">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<nav class="nav">
+  <a class="nav__logo" href="#top">BN<span class="nav__dot">.</span></a>
+
+  <div class="nav__links">
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <a class="nav__resume" href="Resume27.pdf" target="_blank" rel="noopener">Resume →</a>
+</nav>
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<header class="hero" id="top">
+  <div class="hero__filelabel">// Hey there!</div>
+
+  <div class="hero__layout">
+    <img class="hero__portrait" src="images/headshot.jpg" alt="Portrait of Ben Nguyen">
+
+    <div class="hero__inner">
+      <div class="eyebrow">Senior · Computer Engineering · University of Florida</div>
+
+      <h1 class="hero__name">Ben Nguyen</h1>
+
+      <p class="hero__tagline">
+        I build systems where hardware and software meet — custom PCBs and ESP32
+        firmware on one end, distributed Spring Boot services on the other.
+        Graduating May 2027 from UF.
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn btn--solid" href="#projects">View Projects</a>
+        <a class="btn btn--outline" href="#contact">Get in Touch</a>
+        <a class="btn btn--outline" href="Resume27.pdf" target="_blank" rel="noopener">Resume →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__coords">
+    <span>29.6°N</span><span>·</span><span>82.3°W</span><span>·</span><span>GAINESVILLE, FL</span>
+  </div>
+</header>
+
+<!-- ══════════════════════════ PROJECTS ══════════════════════════ -->
+<section class="section" id="projects">
+  <div class="section__head">
+    <h2 class="section__title">Projects</h2>
+    <div class="section__num">01 / PROJECTS</div>
+  </div>
+
+  <div class="projects">
+
+    <!-- ╔═══════════════════════════════════════════════════════════════╗
+         ║  PROJECT CARDS — content is filled in from your resume.       ║
+         ║  Two things still need YOU on every card:                     ║
+         ║    ⚠ the image  (src + alt)                                   ║
+         ║    ⚠ the repo URL on the "Code →" link                        ║
+         ║  Years are my best guess — check each one. See ⚠ TODO marks.  ║
+         ║                                                               ║
+         ║  To add a 5th project, copy a whole <article>…</article>.      ║
+         ╚═══════════════════════════════════════════════════════════════╝ -->
+
+    <!-- ── PROJECT 1 ─────────────────────────────────────────────── -->
+    <article class="card">
+      <img class="card__img" src="images/speaker.jpg" alt="Portable Bluetooth speaker with 3D-printed enclosure and OLED display" loading="lazy">
+      <div class="card__body">
+        <div class="card__head">
+          <h3 class="card__title">Portable Bluetooth Speaker</h3>
+          <!-- ⚠ TODO #3 — confirm year -->
+          <span class="card__year">2026</span>
+        </div>
+        <p class="card__desc">
+          A custom PCB designed in Altium that integrates two MAX98357A class-D 
+          amplifiers with a LILYGO TTGO ESP32 and its built-in display. C++ 
+          firmware on the ESP32 streams Bluetooth audio out over I2S to dual 4Ω 
+          speakers, with playback status and metadata rendered on-screen. The whole thing runs off a portable power bank and lives in a 3D-printed enclosure.
+        </p>
+        <ul class="tags">
+          <li>ESP32</li>
+          <li>C++</li>
+          <li>Altium Designer</li>
+          <li>I2S</li>
+          <li>3D CAD</li>
+        </ul>
+        <div class="card__links">
+          <!-- ⚠ TODO #4 — repo URL -->
+          <a href="#">Code →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── PROJECT 2 ─────────────────────────────────────────────── -->
+    <article class="card">
+      <img class="card__img" src="images/marketplace.gif" alt="Animated walkthrough of the React storefront browsing listings and placing an order" loading="lazy">
+      <div class="card__body">
+        <div class="card__head">
+          <h3 class="card__title">Full-Stack E-Commerce Marketplace</h3>
+          <!-- ⚠ TODO #6 — confirm year -->
+          <span class="card__year">2026</span>
+        </div>
+        <p class="card__desc">
+          A four-tier distributed marketplace: Spring Boot REST API, React storefront,
+          PostgreSQL, and a multi-threaded C++ pricing microservice over gRPC.
+          Optimistic locking with retry eliminated a ~96% order-failure rate under
+          a 50-user concurrent load test.
+        </p>
+        <ul class="tags">
+          <li>Java 21</li>
+          <li>Spring Boot</li>
+          <li>gRPC</li>
+          <li>React</li>
+          <li>PostgreSQL</li>
+          <li>C++</li>
+        </ul>
+        <div class="card__links">
+          <!-- ⚠ TODO #7 — repo URL (your resume links one; paste it here) -->
+          <a href="https://github.com/HuuBen5334/ecommerce-fullstack.git" target="_blank" rel="noopener noreferrer">Code →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── PROJECT 3 ─────────────────────────────────────────────── -->
+    <article class="card">
+      <img class="card__img" src="images/robo.gif" alt="Animated Robocode match showing the robot tank tracking and firing on opponents" loading="lazy">
+      <div class="card__body">
+        <div class="card__head">
+          <h3 class="card__title">Robocode Tournament AI</h3>
+          <!-- ⚠ TODO #9 — confirm year -->
+          <span class="card__year">2025</span>
+        </div>
+        <p class="card__desc">
+          A hybrid finite-state-machine and fuzzy-logic robot tank AI using
+          event-driven radar scanning and predictive targeting. First place among
+          26 competitors, outscoring the benchmark bot by 91%.
+        </p>
+        <ul class="tags">
+          <li>Java</li>
+          <li>Robocode API</li>
+          <li>Finite State Machines</li>
+          <li>Fuzzy Logic</li>
+        </ul>
+        <div class="card__links">
+          <!-- ⚠ TODO #10 — repo URL -->
+          <a href="https://github.com/HuuBen5334/Robocode-Destroyer3000.git" target="_blank" rel="noopener noreferrer">Code →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── PROJECT 4 ─────────────────────────────────────────────── -->
+    <article class="card">
+      <img class="card__img" src="images/fish.gif" alt="Animated fish schooling simulation showing flocking behaviour in a predator–prey ecosystem" loading="lazy">
+      <div class="card__body">
+        <div class="card__head">
+          <h3 class="card__title">FishSchooling Simulation</h3>
+          <!-- ⚠ TODO #12 — confirm year -->
+          <span class="card__year">2025</span>
+        </div>
+        <p class="card__desc">
+          Reynolds flocking (alignment, cohesion, separation) on an interface-based
+          steering system, with a dynamic UI exposing per-species sliders for tuning
+          5 creature types in a predator–prey ecosystem.
+        </p>
+        <ul class="tags">
+          <li>C#</li>
+          <li>Godot</li>
+          <li>Git</li>
+        </ul>
+        <div class="card__links">
+          <!-- ⚠ TODO #13 — repo URL (your resume links one; paste it here) -->
+          <a href="https://github.com/HuuBen5334/FishSchooling.git" target="_blank" rel="noopener noreferrer">Code →</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════ ABOUT ══════════════════════════ -->
+<section class="section about" id="about">
+  <div>
+    <div class="section__num section__num--stacked">02 / ABOUT</div>
+    <h2 class="section__title about__title">About</h2>
+  </div>
+
+  <div class="about__text">
+    <p>
+      I'm a senior Computer Engineering student at the University of Florida. 
+      I enjoy working with tangible hardware components as well as software development, 
+      so I am comfortable with both the practical and theoretical aspects of the field.
+    </p>
+    <p>
+      I spent Fall 2025 at Kyoto University studying cross-cultural engineering
+      design, and I now run workshops for UF's Association of Computer Engineers.
+      I recently started doing PCB design, that is my main focus right now.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════ SKILLS ══════════════════════════ -->
+<section class="section" id="skills">
+  <div class="section__num section__num--stacked">03 / SKILLS</div>
+  <h2 class="section__title section__title--block">Skills &amp; Tools</h2>
+
+  <div class="skills">
+
+    <div class="skills__group">
+      <div class="skills__label">Languages</div>
+      <ul class="skills__list">
+        <li>C / C++</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>C#</li>
+        <li>JavaScript</li>
+        <li>AVR Assembly</li>
+        <li>VHDL</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+
+    <div class="skills__group">
+      <div class="skills__label">Embedded &amp; Hardware</div>
+      <ul class="skills__list">
+        <li>ESP32</li>
+        <li>Arduino</li>
+        <li>Altium Designer (PCB)</li>
+        <li>I2S</li>
+        <li>Quartus Prime</li>
+        <li>Onshape CAD</li>
+        <li>3D Printing</li>
+      </ul>
+    </div>
+
+    <div class="skills__group">
+      <div class="skills__label">Software &amp; Frameworks</div>
+      <ul class="skills__list">
+        <li>Spring Boot</li>
+        <li>React</li>
+        <li>gRPC</li>
+        <li>REST APIs</li>
+        <li>WebSockets</li>
+        <li>PostgreSQL</li>
+        <li>Godot</li>
+        <li>Git</li>
+      </ul>
+    </div>
+
+    <div class="skills__group">
+      <div class="skills__label">Certificates</div>
+      <ul class="skills__list">
+        <li>Siemens Expedite Microcredential</li>
+        <li>AutoCAD Inventor</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════ EXPERIENCE ══════════════════════════ -->
+<section class="section" id="experience">
+  <div class="section__num section__num--stacked">04 / EXPERIENCE</div>
+  <h2 class="section__title section__title--block">Experience</h2>
+
+  <div class="rows">
+
+    <div class="row">
+      <div class="row__dates">March 2026 — Present</div>
+      <div>
+        <div class="row__head">
+          <h3 class="row__title">Workshop Lead</h3>
+          <span class="row__org">UF Association of Computer Engineers</span>
+        </div>
+        <p class="row__desc">
+          Improved club engagement by hosting research lab tours and technical
+          workshops, coordinating with presenters and staff to keep events running
+          smoothly.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row__dates">Sept — Dec 2025</div>
+      <div>
+        <div class="row__head">
+          <h3 class="row__title">Networking Event Coordinator</h3>
+          <span class="row__org">Kyoto University</span>
+        </div>
+        <p class="row__desc">
+          Organized lunch networking events averaging 60 attendees with structured
+          conversation activities, raising Japanese student attendance 40% over prior
+          semesters through faculty outreach and campus-wide promotion.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row__dates">May 2023 — Aug 2024</div>
+      <div>
+        <div class="row__head">
+          <h3 class="row__title">Customer Service &amp; Court Maintenance</h3>
+          <span class="row__org">Blackwood Tennis Management</span>
+        </div>
+        <p class="row__desc">
+          Managed daily shop operations (transactions, check-ins, court reservations) and resolved customer inquiries.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════ EDUCATION ══════════════════════════ -->
+<section class="section" id="education">
+  <div class="section__num section__num--stacked">05 / EDUCATION</div>
+  <h2 class="section__title section__title--block">Education</h2>
+
+  <!-- ⚠ TODO #15 — confirm your start year (2023 assumed from a May 2027 grad date) -->
+  <div class="edu">
+    <div class="row__dates">2023 – 2027</div>
+    <div>
+      <h3 class="edu__degree">B.S. in Computer Engineering</h3>
+      <div class="edu__school">University of Florida, Gainesville, FL · GPA 3.70</div>
+      <p class="row__desc">
+        Study abroad: Cross-Cultural Engineering Design, Kyoto University (Fall 2025).
+        Relevant coursework: Data Structures &amp; Algorithms, Microprocessor
+        Applications, Digital Logic, Circuits I, AI for Virtual Environments.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ CONTACT / FOOTER ══════════════════════════ -->
+<footer class="footer" id="contact">
+  <div class="section__num section__num--footer">06 / CONTACT</div>
+  <h2 class="footer__title">Pleasure to meet you, let's get in touch.</h2>
+
+  <!-- Your phone number from the resume is deliberately NOT here — a number on a
+       public page attracts scrapers and spam. Add a <a href="tel:+12398880663">
+       line if you'd rather have it. -->
+  <div class="footer__links">
+    <a href="mailto:benn5334@gmail.com">benn5334@gmail.com</a>
+    <a href="https://linkedin.com/in/nguyenhuuben" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/HuuBen5334" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+
+  <div class="footer__meta">
+    <span>Ben Nguyen — B.S. Computer Engineering, University of Florida</span>
+    <span>Gainesville, FL</span>
+  </div>
+</footer>
+
+</body>
+</html>
