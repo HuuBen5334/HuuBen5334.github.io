@@ -10,7 +10,7 @@ Plain static site. No build step, no package manager, no framework.
 - `styles.css`: all styling, organized by section with banner comments
 - `script.js`: scroll animations and nav behaviour (vanilla JS, no dependencies)
 - `images/`: project media and headshot
-- `Resume27.pdf`, `Speaker_Design_Report.pdf`: linked from the page
+- `BenNguyenResume.pdf`, `Speaker_Design_Report.pdf`: linked from the page. The resume is the source of truth for site content, so when it changes, update the page to match.
 
 To preview, open `index.html` in a browser. Anything that works from `file://` works on Pages.
 
@@ -48,7 +48,7 @@ Copy an `<article class="tile">…</article>` block in `#projects`.
 
 ## Conventions
 
-- Keep the `⚠ TODO` comments in `index.html` until Ben confirms those facts (project years, start year).
+- Keep the `⚠ TODO` comments in `index.html` until Ben confirms those facts (project years).
 - Strip EXIF/GPS metadata from photos before committing, and resize anything over about 2000px wide.
 - Don't publish a phone number on the page (see the comment in the contact section).
 - The hero tagline is intentionally empty. Don't invent one.

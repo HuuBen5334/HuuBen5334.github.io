@@ -507,7 +507,23 @@ a:focus-visible, button:focus-visible {
 .timeline__dates { font-size: 15px; color: var(--ink-3); padding-top: 6px; }
 .timeline__title { font-size: 28px; font-weight: 600; line-height: 1.15; letter-spacing: -0.03em; }
 .timeline__org { font-size: 17px; font-weight: 500; color: var(--ink-2); margin: 4px 0 12px; }
-.timeline__desc { font-size: 17px; color: var(--ink-2); max-width: 620px; }
+.timeline__points { display: flex; flex-direction: column; gap: 8px; max-width: 640px; }
+.timeline__points li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 17px;
+  color: var(--ink-2);
+}
+.timeline__points li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: .65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ink-3);
+}
 
 /* ═══════════════════════════ EDUCATION ═══════════════════════════ */
 .section#education { padding-bottom: var(--sec-y); }

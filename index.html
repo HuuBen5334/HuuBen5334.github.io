@@ -35,7 +35,7 @@
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
-      <a class="nav__resume" href="Resume27.pdf" target="_blank" rel="noopener">Resume</a>
+      <a class="nav__resume" href="BenNguyenResume.pdf" target="_blank" rel="noopener">Resume</a>
     </div>
   </div>
 </nav>
@@ -57,7 +57,7 @@
 
     <div class="hero__cta intro" style="--d:3">
       <a class="btn btn--primary" href="#projects">View projects</a>
-      <a class="btn btn--link" href="Resume27.pdf" target="_blank" rel="noopener">Resume <span class="chev" aria-hidden="true">›</span></a>
+      <a class="btn btn--link" href="BenNguyenResume.pdf" target="_blank" rel="noopener">Resume <span class="chev" aria-hidden="true">›</span></a>
     </div>
   </div>
 
@@ -86,11 +86,13 @@
       <p class="tile__kicker">Hardware · 2026</p>
       <h3 class="tile__title">Portable Bluetooth Speaker</h3>
       <p class="tile__desc">
-        A custom PCB designed in Altium that integrates two MAX98357A class-D
-        amplifiers with a LILYGO TTGO ESP32 and its built-in display. C++
-        firmware on the ESP32 streams Bluetooth audio out over I2S to dual 4Ω
-        speakers, with playback status and metadata rendered on-screen. The whole
-        thing runs off a portable power bank and lives in a 3D-printed enclosure.
+        A battery-powered speaker built around a custom 2-layer PCB designed in
+        Altium, integrating an ESP32 with dual MAX98357A class-D amplifiers.
+        C++ firmware (Arduino framework) streams Bluetooth audio over I2S to dual
+        5W speakers, with hardware interrupts and debouncing for the tactile
+        play/pause buttons. An LCD renders real-time system status and playback
+        metadata, and everything is housed in a 3D-printed enclosure modeled in
+        SolidWorks.
       </p>
       <div class="tile__links">
         <a class="btn btn--primary" href="Speaker_Design_Report.pdf" target="_blank" rel="noopener">Design report</a>
@@ -102,13 +104,13 @@
     </figure>
 
     <dl class="tile__facts reveal">
+      <div><dt>2-layer</dt><dd>Custom PCB designed in Altium</dd></div>
       <div><dt>2×</dt><dd>MAX98357A class-D amps</dd></div>
-      <div><dt>I2S</dt><dd>Digital audio to dual 4Ω drivers</dd></div>
-      <div><dt>ESP32</dt><dd>C++ firmware with on-screen metadata</dd></div>
+      <div><dt>5W</dt><dd>Dual speakers fed over I2S</dd></div>
     </dl>
 
     <ul class="tags reveal">
-      <li>ESP32</li><li>C++</li><li>Altium Designer</li><li>I2S</li><li>3D CAD</li>
+      <li>ESP32</li><li>C++</li><li>Altium Designer</li><li>I2S</li><li>SolidWorks</li><li>PCB Design</li>
     </ul>
   </article>
 
@@ -119,10 +121,11 @@
       <p class="tile__kicker">Distributed Systems · 2026</p>
       <h3 class="tile__title">Full&#8209;Stack E&#8209;Commerce Marketplace</h3>
       <p class="tile__desc">
-        A four-tier distributed marketplace: Spring Boot REST API, React storefront,
-        PostgreSQL, and a multi-threaded C++ pricing microservice over gRPC.
-        Optimistic locking with retry eliminated a ~96% order-failure rate under
-        a 50-user concurrent load test.
+        An e-commerce marketplace built with React, Spring Boot, and PostgreSQL,
+        featuring a custom C++ gRPC microservice for real-time dynamic pricing.
+        Optimistic locking eliminated a 96% order-failure rate during high-traffic
+        load testing, real-time order notifications are delivered over
+        STOMP-over-WebSocket, and the system is validated with Mockito unit tests.
       </p>
       <div class="tile__links">
         <a class="btn btn--primary" href="https://github.com/HuuBen5334/ecommerce-fullstack.git" target="_blank" rel="noopener noreferrer">View code</a>
@@ -134,13 +137,13 @@
     </figure>
 
     <dl class="tile__facts reveal">
-      <div><dt>~96%</dt><dd>Order-failure rate eliminated</dd></div>
-      <div><dt>50</dt><dd>Concurrent users in load test</dd></div>
-      <div><dt>4</dt><dd>Tiers, joined by REST and gRPC</dd></div>
+      <div><dt>96%</dt><dd>Order-failure rate eliminated</dd></div>
+      <div><dt>C++</dt><dd>gRPC microservice for dynamic pricing</dd></div>
+      <div><dt>Live</dt><dd>Order notifications over WebSocket</dd></div>
     </dl>
 
     <ul class="tags reveal">
-      <li>Java 21</li><li>Spring Boot</li><li>gRPC</li><li>React</li><li>PostgreSQL</li><li>C++</li>
+      <li>Java</li><li>Spring Boot</li><li>C++</li><li>gRPC</li><li>React</li><li>PostgreSQL</li>
     </ul>
   </article>
 
@@ -155,9 +158,11 @@
         <h3 class="tile__title">Robocode Tournament AI</h3>
         <p class="tile__stat"><strong>1st</strong> of 26 competitors</p>
         <p class="tile__desc">
-          A hybrid finite-state-machine and fuzzy-logic robot tank AI using
-          event-driven radar scanning and predictive targeting. Outscored the
-          benchmark bot by 91%.
+          An autonomous Java tank AI that outscored the benchmark bot by 91%. A
+          finite-state machine (scan/attack/evade) drives targeting and firepower;
+          a minimum-risk movement engine scores 300 sampled destinations against an
+          inverse-square risk field. It dodges shots by detecting enemy energy drops
+          and leads targets with linear-intercept aiming.
         </p>
         <div class="tile__links">
           <a class="btn btn--link" href="https://github.com/HuuBen5334/Robocode-Destroyer3000.git" target="_blank" rel="noopener noreferrer">View code <span class="chev" aria-hidden="true">›</span></a>
@@ -169,7 +174,7 @@
       </figure>
 
       <ul class="tags reveal">
-        <li>Java</li><li>Robocode API</li><li>Finite State Machines</li><li>Fuzzy Logic</li>
+        <li>Java</li><li>Robocode API</li><li>Finite State Machines</li><li>Minimum-Risk Movement</li>
       </ul>
     </article>
 
@@ -181,9 +186,10 @@
         <h3 class="tile__title">FishSchooling Simulation</h3>
         <p class="tile__stat"><strong>5</strong> tunable species</p>
         <p class="tile__desc">
-          Reynolds flocking (alignment, cohesion, separation) on an interface-based
-          steering system, with a dynamic UI exposing per-species sliders in a
-          predator–prey ecosystem.
+          Flocking (alignment, cohesion, separation) on an interface-based steering
+          system for autonomous 2D agents, with a dynamic UI of per-species sliders
+          for real-time tuning in a predator–prey ecosystem. Built with a mixed
+          Japanese–international team of 4 using Git branching and pull requests.
         </p>
         <div class="tile__links">
           <a class="btn btn--link" href="https://github.com/HuuBen5334/FishSchooling.git" target="_blank" rel="noopener noreferrer">View code <span class="chev" aria-hidden="true">›</span></a>
@@ -195,7 +201,7 @@
       </figure>
 
       <ul class="tags reveal">
-        <li>C#</li><li>Godot</li><li>Git</li>
+        <li>C#</li><li>Godot Engine</li><li>Git</li>
       </ul>
     </article>
 
@@ -215,7 +221,8 @@
 
   <p class="about__text reveal">
     I spent Fall 2025 at Kyoto University studying cross-cultural engineering
-    design, and I now run workshops for UF's Association of Computer Engineers.
+    design. I'm now President of UF's Association of Computer Engineers and an
+    electrical team member at UF's Machine Intelligence Laboratory.
     I recently started doing PCB design, that is my main focus right now.
   </p>
 </section>
@@ -230,7 +237,7 @@
     <div class="skills__group reveal" style="--d:0">
       <h3 class="skills__label">Languages</h3>
       <ul class="skills__list">
-        <li>C / C++</li><li>Java</li><li>Python</li><li>C#</li>
+        <li>C</li><li>C++</li><li>C#</li><li>Java</li><li>Python</li>
         <li>JavaScript</li><li>AVR Assembly</li><li>VHDL</li><li>SQL</li>
       </ul>
     </div>
@@ -238,8 +245,8 @@
     <div class="skills__group reveal" style="--d:1">
       <h3 class="skills__label">Embedded &amp; Hardware</h3>
       <ul class="skills__list">
-        <li>ESP32</li><li>Arduino</li><li>Altium Designer (PCB)</li><li>I2S</li>
-        <li>Quartus Prime</li><li>Onshape CAD</li><li>3D Printing</li>
+        <li>ESP32</li><li>Raspberry Pi Pico</li><li>Arduino</li><li>Altium Designer</li>
+        <li>I2S</li><li>Quartus Prime</li><li>SolidWorks</li>
       </ul>
     </div>
 
@@ -268,40 +275,45 @@
 
   <ol class="timeline">
     <li class="timeline__item reveal">
-      <p class="timeline__dates">March 2026 — Present</p>
+      <p class="timeline__dates">Aug 2026 — Present</p>
       <div>
-        <h3 class="timeline__title">Workshop Lead</h3>
+        <h3 class="timeline__title">Electrical Team Member</h3>
+        <p class="timeline__org">Machine Intelligence Laboratory (MIL), University of Florida</p>
+        <ul class="timeline__points">
+          <li>Developed the light board for the TerraGator rover, programming a Raspberry
+            Pi Pico to drive AL8843SP-13 LED drivers via PWM for indicators and headlights.</li>
+          <li>Researched PCB design practices, including component selection and layout,
+            to inform team board designs; report progress and blockers in team standups.</li>
+        </ul>
+      </div>
+    </li>
+
+    <li class="timeline__item reveal">
+      <p class="timeline__dates">Aug 2026 — Present</p>
+      <div>
+        <h3 class="timeline__title">President</h3>
         <p class="timeline__org">UF Association of Computer Engineers</p>
-        <p class="timeline__desc">
-          Improved club engagement by hosting research lab tours and technical
-          workshops, coordinating with presenters and staff to keep events running
-          smoothly.
-        </p>
+        <ul class="timeline__points">
+          <li>Lead the executive board, setting semester goals and delegating events,
+            outreach, and finances.</li>
+          <li>Organize research lab tours and technical workshops with faculty and
+            industry presenters.</li>
+          <li>Serve as liaison to the ECE department and sponsors; manage the club budget.</li>
+        </ul>
       </div>
     </li>
 
     <li class="timeline__item reveal">
       <p class="timeline__dates">Sept — Dec 2025</p>
       <div>
-        <h3 class="timeline__title">Networking Event Coordinator</h3>
-        <p class="timeline__org">Kyoto University</p>
-        <p class="timeline__desc">
-          Organized lunch networking events averaging 60 attendees with structured
-          conversation activities, raising Japanese student attendance 40% over prior
-          semesters through faculty outreach and campus-wide promotion.
-        </p>
-      </div>
-    </li>
-
-    <li class="timeline__item reveal">
-      <p class="timeline__dates">May 2023 — Aug 2024</p>
-      <div>
-        <h3 class="timeline__title">Customer Service &amp; Court Maintenance</h3>
-        <p class="timeline__org">Blackwood Tennis Management</p>
-        <p class="timeline__desc">
-          Managed daily shop operations (transactions, check-ins, court reservations)
-          and resolved customer inquiries.
-        </p>
+        <h3 class="timeline__title">Exchange Student &amp; Networking Event Coordinator</h3>
+        <p class="timeline__org">Kyoto University — Cross-Cultural Engineering Design Program · Kyoto, Japan</p>
+        <ul class="timeline__points">
+          <li>Built FishSchooling with a mixed Japanese–international team, communicating
+            across language barriers.</li>
+          <li>Organized networking lunches averaging 60 attendees, raising Japanese
+            student attendance by 40%.</li>
+        </ul>
       </div>
     </li>
   </ol>
@@ -309,16 +321,14 @@
 
 <!-- ══════════════════════════ EDUCATION ══════════════════════════ -->
 <section class="section" id="education">
-  <!-- ⚠ TODO — confirm your start year (2023 assumed from a May 2027 grad date) -->
   <div class="edu reveal">
-    <p class="edu__dates">2023 – 2027</p>
+    <p class="edu__dates">Expected May 2027</p>
     <h2 class="edu__degree">B.S. in Computer Engineering</h2>
     <p class="edu__school">University of Florida · Gainesville, FL</p>
-    <p class="edu__gpa"><strong>3.70</strong> GPA</p>
+    <p class="edu__gpa"><strong>3.65</strong> GPA</p>
     <p class="edu__desc">
-      Study abroad: Cross-Cultural Engineering Design, Kyoto University (Fall 2025).
-      Relevant coursework: Data Structures &amp; Algorithms, Microprocessor
-      Applications, Digital Logic, Circuits I, AI for Virtual Environments.
+      Coursework: Data Structures &amp; Algorithms, Microprocessor Applications,
+      Digital Logic, Circuits I, AI for Virtual Environments.
     </p>
   </div>
 </section>
