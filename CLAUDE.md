@@ -6,9 +6,8 @@ Personal portfolio for Ben Nguyen (Computer Engineering, University of Florida),
 
 Plain static site. No build step, no package manager, no framework.
 
-- `index.html`: all content and markup
+- `index.html`: all content and markup, plus one small inline script that highlights the nav link for the section on screen
 - `styles.css`: all styling, organized by section with banner comments
-- `script.js`: scroll animations and nav behaviour (vanilla JS, no dependencies)
 - `images/`: project media and headshot
 - `NguyenBenResume.pdf`, `Speaker_Design_Report.pdf`: linked from the page. The resume is the source of truth for site content, so when it changes, update the page to match.
 
@@ -16,41 +15,28 @@ To preview, open `index.html` in a browser. Anything that works from `file://` w
 
 ## Design language
 
-The look is Apple-style: a white page, soft-gray (`--surface`) and black (`tile--dark`) rounded tiles, big tight-tracked headlines, one blue (`--accent`) for actions, and generous whitespace.
+Simple, iOS-style, and easy to navigate: a white page, hairline dividers, tight spacing, and thin San Francisco type.
 
-- **Tokens** live in `:root` at the top of `styles.css`. Change colours there, not inline.
-- **Font**: system SF Pro on Apple devices, with Inter from Google Fonts as the fallback elsewhere.
-- **Easing**: always use `var(--ease)` (`cubic-bezier(.16,1,.3,1)`) so motion feels consistent.
-- Headlines end with a period ("Projects.") as a deliberate stylistic choice.
+- **Tokens** live in `:root` at the top of `styles.css` (colours, `--font`, `--max`, `--pad-x`, `--pad-y`, `--radius`). Change them there, not inline.
+- **Font**: system San Francisco (`-apple-system`) on Apple devices, with Inter from Google Fonts as the fallback elsewhere. Large headings use weight 200, body copy 300, and small text (14px and under) 400 so it stays readable.
+- **Spacing is deliberately tight.** Sections use `--pad-y` (56px desktop, 40px phone), and content sits in a centred column capped at `--max` (1040px).
+- **Accent** is navy `--accent`, used for buttons, link underlines, the eyebrow, and the contact footer background.
+- Keep it uncluttered: no decorative section numbers, code-style labels, or scroll animations.
 
-## Motion system (script.js + styles.css)
+## Navigation
 
-| Hook | Effect |
-|---|---|
-| `.intro` + `style="--d:N"` | Page-load rise-in, staggered by N (CSS only) |
-| `.reveal` + optional `--d` | Fades and rises in once on scroll; gets `.is-in`, then `.is-done` |
-| `[data-hero]` | Hero content scales back and fades as you scroll (`--hero-p`) |
-| `[data-zoom]` | Project media scales 0.9 → 1 entering the viewport (`--p`) |
-| `[data-words]` | Paragraph lights up word by word while scrolling |
-
-Rules:
-- Content is hidden only under `html.js`, so the page stays readable without JavaScript.
-- `prefers-reduced-motion` disables all movement (in both the CSS and the JS). Keep it that way.
-- Animate only `transform`, `opacity` and `color`, never layout properties.
+- Every section in the page has a link in `.nav__links`. If you add a section, add its link too; the highlight script picks it up automatically.
+- On phones the nav links become one horizontally swipeable row under the logo.
 
 ## Adding a project
 
-Copy an `<article class="tile">…</article>` block in `#projects`.
-- Alternate `tile` and `tile tile--dark` for rhythm.
-- `tile--compact` tiles go inside `.tile-pair` (two per row on desktop).
-- Large tiles can include a `.tile__facts` row of three headline numbers. Only use real figures.
-- Give every `<img>` its `width`/`height` attributes and `loading="lazy"`.
+Copy an `<article class="card">…</article>` block in `#projects`. Each card has an image (`.card__img`, 16:9, `loading="lazy"`), title and year, description, `.tags`, and `.card__links`.
 
 ## Conventions
 
 - Keep the `⚠ TODO` comments in `index.html` until Ben confirms those facts (project years).
 - Strip EXIF/GPS metadata from photos before committing, and resize anything over about 2000px wide.
 - Don't publish a phone number on the page (see the comment in the contact section).
-- The hero tagline is intentionally empty. Don't invent one.
+- The hero tagline is intentionally empty and hidden while empty. Don't invent one.
 - Do all work on a branch. Never push directly to `main`, because `main` deploys live.
 - Test at 390px (phone) and 1440px (desktop) widths. The page must have no horizontal scroll.
